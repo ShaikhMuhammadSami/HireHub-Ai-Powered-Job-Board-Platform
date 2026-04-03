@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Sidebar from "@/components/ui/Sidebar";
 import JobCard from "@/components/ui/JobCard";
 import { jobs } from "@/app/data/job";
+import Link from "next/link";
 
 export default function JobsPage() {
   const [search, setSearch] = useState("");
@@ -46,6 +47,8 @@ export default function JobsPage() {
         </div>
 
       </div>
+
+      {/* <Link href={""}></Link> */}
     </div>
   );
 }
