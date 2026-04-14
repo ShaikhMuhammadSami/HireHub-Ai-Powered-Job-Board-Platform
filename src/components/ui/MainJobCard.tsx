@@ -62,9 +62,9 @@ const MainJobCard = async ({jobData} : JobCardProps) => {
                         })}</p>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <AiMatchScore jobDetails={jobData} />
-                    </div>
+                    </div> */}
 
                     <div>
                         <Badge className=" font-medium flex gap-2 cursor-pointer active:scale-95">
@@ -72,6 +72,9 @@ const MainJobCard = async ({jobData} : JobCardProps) => {
                             <BookMarked className="h-4 w-4"></BookMarked>
                         </Badge>
                     </div>
+                </div>
+                <div className="flex justify-center items-center mt-5">
+                    <AiMatchScore jobDetails={jobData} />
                 </div>
             </CardContent>
         </Card>
