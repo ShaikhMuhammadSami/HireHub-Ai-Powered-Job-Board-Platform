@@ -19,7 +19,7 @@ const MainJobCard = async ({jobData} : JobCardProps) => {
 
   return (
     <div>
-        <Card className="p-5 min-h-80 md:min-h-125">
+        <Card className="p-5 min-h-80 md:min-h-150">
             <CardContent>
                 <div className="flex justify-between">
                     <div className="flex flex-col gap-2">
@@ -61,10 +61,6 @@ const MainJobCard = async ({jobData} : JobCardProps) => {
                             year : "numeric"
                         })}</p>
                     </div>
-
-                    {/* <div>
-                        <AiMatchScore jobDetails={jobData} />
-                    </div> */}
 
                     <div>
                         <Badge className=" font-medium flex gap-2 cursor-pointer active:scale-95">
