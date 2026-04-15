@@ -1,7 +1,9 @@
 
+
+
 import type { Job } from "@/lib/schema";
 import Link from "next/link";
-
+import AiMatchScore from "./AiMatchScore";
 
 const jobTypeConfig: Record<string, { label: string; className: string }> = {
   FULL_TIME:   { label: "Full-time",   className: "bg-blue-50 text-blue-700" },
@@ -17,11 +19,10 @@ export default function JobCard({ job }: { job: Job }) {
     className: "bg-gray-100 text-gray-600",
   };
 
-
   return (
     <div className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col min-h-70 hover:shadow-lg transition-shadow duration-200">
 
-      {/* Header — badge + job type */}
+      {/* Header — job type badge */}
       <div className="flex items-center justify-between">
         <span className={`inline-block text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full ${typeConfig.className}`}>
           {typeConfig.label}
@@ -55,6 +56,11 @@ export default function JobCard({ job }: { job: Job }) {
             <span>{jobTypeConfig[job.jobType]?.label ?? job.jobType}</span>
           </div>
         </div>
+      </div>
+
+   {/* ai feature match score */}
+      <div className="mt-4 pt-3 border-t border-gray-100">
+        <AiMatchScore jobDetails={job} />
       </div>
 
       {/* Salary + Button */}

@@ -1,3 +1,4 @@
+
 import { Box, Button, Avatar } from "@mui/material";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
@@ -108,10 +109,14 @@ async function Home({params} : {params : {jobId : string}}) {
               </div>
 
               <div className="space-y-3 text-sm text-gray-500">
-                <div className="flex items-center gap-2">
-                  <Badge variant={"secondary"} className='text-gray-800'>Location</Badge>
-                  <span>:</span>
-                  <span>{jobDetail?.location}</span>
+
+                {/* ✅ FIX: Location aur AI Score alag rows mein */}
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-2">
+                    <Badge variant={"secondary"} className='text-gray-800'>Location</Badge>
+                    <span>:</span>
+                    <span>{jobDetail?.location}</span>
+                  </div>
                   <AiFeatureMatchScore jobDetails={jobDetail} />
                 </div>
 
@@ -146,13 +151,10 @@ async function Home({params} : {params : {jobId : string}}) {
               <h3 className="font-semibold text-blue-500">{jobDetail?.applicationUrl}</h3>
 
               <div className="flex items-center gap-3">
-
-
                 <div className="flex items-center gap-3">
                   {/* Ab yahan Client Component call ho raha hai */}
                 </div>
                 <JobApplyBtn url={jobDetail?.applicationUrl} />
-
               </div>
             </Box>
           </div>
