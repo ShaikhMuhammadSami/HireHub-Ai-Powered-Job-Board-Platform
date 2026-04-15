@@ -1,5 +1,3 @@
-
-
 export function calculateMatchScore(
   userSkills: string[] | string | undefined | null,
   jobSkills: string[] | string | undefined | null
