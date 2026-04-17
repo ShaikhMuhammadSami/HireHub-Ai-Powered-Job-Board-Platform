@@ -37,7 +37,7 @@ export default async function ProfilePage() {
   });
 
   return (
-    <div className="min-h-screen bg-zinc-50 py-10">
+  <div className="min-h-screen bg-zinc-50 py-10">
       <div className="max-w-2xl mx-auto space-y-4">
 
         {/* ── PAGE HEADER ── */}
