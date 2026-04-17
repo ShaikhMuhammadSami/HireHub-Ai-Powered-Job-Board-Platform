@@ -11,7 +11,7 @@ export default async function Home() {
     <>
       {/* Hero Section */}
       <section
-        className="relative text-white px-6 md:px-20 py-24 md:py-40 flex items-center h-[65vh] overflow-hidden"
+        className="relative text-white px-6 md:px-20 py-24 md:py-40 flex items-center h-[75vh] md:h-[65vh] overflow-hidden"
         style={{
           backgroundImage: "url('/img1.jpg')",
           backgroundSize: "cover",
